@@ -24,6 +24,7 @@ import { useState, useTransition } from 'react';
 
 export const LoginForm = () => {
   const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get('callbackUrl');
   const urlError =
     searchParams.get('error') === 'OAuthAccountNotLinked'
       ? 'Email already in use with another provider'
@@ -44,7 +45,7 @@ export const LoginForm = () => {
 
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
     startTransition(() => {
-      login(values)
+      login(values, callbackUrl)
         .then((data) => {
           if (data?.error) {
             form.reset();

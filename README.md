@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Auth v5 Demo
+
+This is a demonstration project showcasing the implementation of various authentication functionalities using Auth v5. The project includes the following features:
+
+## Functionalities
+
+1. **Social Media Login**
+   - Users can sign in using their social media accounts, such as Facebook, Google, or Twitter.
+   - Integration with OAuth 2.0 allows for a seamless and secure social media login experience.
+
+2. **Email Verification**
+   - New users are required to verify their email address upon registration.
+   - A verification email is sent to the user's registered email address with a unique link for validation.
+
+3. **Two-Factor Authentication**
+   - Enhance account security with two-factor authentication (2FA).
+   - Users have the option to enable 2FA, and they will need to provide a secondary verification code in addition to their password during login.
+
+4. **Role-Based Verification**
+   - Implement role-based access control for user accounts.
+   - Assign different roles to users (e.g., admin, user, moderator), and control access to specific features or content based on their assigned roles.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up the Auth v5 demo on your local machine:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/auth-v5-demo.git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies:**
+   ```bash
+   cd auth-v5-demo
+   npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Configure Environment Variables:**
+    - Create a .env file in the root directory and set the required   environment variables. Sample variables include:
+    ```bash
+    DATABASE_URL=
+    DIRECT_URL=
+    AUTH_SECRET=
+    GITHUB_CLIENT_ID=
+    GITHUB_CLIENT_SECRET=
+    GOOGLE_CLIENT_ID=
+    GOOGLE_CLIENT_SECRET=
+    RESEND_API_KEY=
+    NEXT_PUBLIC_APP_URL=
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Access the Demo
+Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to explore the Auth v5 demo.
 
-## Learn More
+## Technologies Used
+- Next js
+- Auth js (v5)
+- Resend
+- Your preferred database technology (e.g., MongoDB, PostgreSQL)
 
-To learn more about Next.js, take a look at the following resources:
+## Contributions
+Feel free to contribute to the project by submitting issues or pull requests. Contributions are always welcome!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the MIT License
